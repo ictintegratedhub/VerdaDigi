@@ -27,6 +27,9 @@
         .partner-card { background: white; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         footer { background: var(--green); color: white; }
     </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
 
@@ -101,29 +104,90 @@
     }
 </style>
 
-<!-- Introduction / About Us -->
-<section id="about" class="py-5 bg-light">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <span class="badge badge-since px-3 py-2">Since 2025</span>
-                <h2 class="section-title display-5">Introduction</h2>
-                <h3>Welcome to VerdaDigi Africa!</h3>
-                <p class="lead">"Connecting Africa's Farms, Finance & Digital Access"</p>
-                <p>We're excited to have you on this journey toward empowering lives through innovation, agriculture, telecom, and financial inclusion.</p>
-                <p>At VerdaDigi Africa, we believe everyone — regardless of location or background — deserves access to income opportunities...</p>
-                <p class="fw-bold">David A. Iorafia<br><small>CEO/Chairman</small></p>
+<section class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #f8fdf8 0%, #e8f5e9 100%);">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Left Side: Hexagon Photo + Name + Title -->
+      <div class="col-lg-5 text-center text-lg-start" data-aos="fade-right" data-aos-delay="100">
+        <div class="position-relative d-inline-block">
+          <!-- Hexagon frame -->
+          <div class="hexagon-frame mx-auto" style="width: 320px; height: 370px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); background: #228B22; padding: 12px;">
+            <div class="bg-white rounded-0 overflow-hidden" style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                   alt="David A. Iorafia" 
+                   class="img-fluid w-100 h-100 object-fit-cover"
+                   loading="lazy">
             </div>
-            <div class="col-lg-6 text-center">
-                <img src¨Home.jpeg" alt="David A. Iorafia" class="img-fluid rounded-circle shadow" style="max-width: 400px;">
-            </div>
+          </div>
+
+          <!-- Since 2025 badge -->
+          <div class="position-absolute top-0 end-0 translate-middle-y me-3 mt-3" data-aos="zoom-in" data-aos-delay="400">
+            <span class="badge rounded-pill px-4 py-2 fw-bold fs-5" 
+                  style="background-color: #228B22; color: white; border: 3px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+              Since 2025
+            </span>
+          </div>
         </div>
-        <div class="mt-5">
-            <h4 class="section-title">About Us</h4>
-            <p>A future-forward platform rooted in growth, agriculture, digital innovation, and inclusive wealth-building across Africa.</p>
+
+        <h3 class="mt-4 fw-bold fs-2" style="color: #228B22;" data-aos="fade-up" data-aos-delay="300">
+          David A. Iorafia
+        </h3>
+        <p class="text-muted fs-5 fw-medium" data-aos="fade-up" data-aos-delay="400">
+          CEO / Chairman
+        </p>
+      </div>
+
+      <!-- Right Side: Welcome Message & About Us -->
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+        <!-- Section Title -->
+        <h2 class="display-5 fw-bold mb-4" style="color: #FF8C00;" data-aos="fade-up" data-aos-delay="100">
+          Introduction
+        </h2>
+
+        <!-- Welcome Message -->
+        <div class="mb-5">
+          <h4 class="fw-bold mb-3" style="color: #228B22;" data-aos="fade-up" data-aos-delay="200">
+            Welcome Message
+          </h4>
+          <p class="lead fw-light mb-3" data-aos="fade-up" data-aos-delay="300">
+            Welcome to VerdaDigi Africa!<br>
+            <span class="fw-bold">"Connecting Africa's Farms, Finance & Digital Access"</span>
+          </p>
+          <p class="fs-5 mb-4" data-aos="fade-up" data-aos-delay="400">
+            We're excited to have you on this journey toward empowering lives through innovation, agriculture, telecom, and financial inclusion.
+          </p>
+          <p class="fs-5 mb-4" data-aos="fade-up" data-aos-delay="500">
+            At VerdaDigi Africa, we believe everyone — regardless of location or background — deserves access to income opportunities. Whether you're here as a vendor, a reseller, a customer, or a community partner, you're now part of a movement designed to uplift and transform.
+          </p>
+          <p class="fs-5 fw-medium" style="color: #FF8C00;" data-aos="fade-up" data-aos-delay="600">
+            This is more than a platform. It's a vision. It's your gateway to earn, grow, and impact lives through the power of technology and connection.
+          </p>
         </div>
+
+        <!-- About Us -->
+        <div class="p-4 rounded-4 shadow-sm" style="background: rgba(34,139,34,0.08); border-left: 6px solid #FF8C00;" data-aos="zoom-in" data-aos-delay="700">
+          <h4 class="fw-bold mb-3" style="color: #228B22;">
+            About Us
+          </h4>
+          <p class="fs-5">
+            A future-forward platform rooted in growth, agriculture, digital innovation, and inclusive wealth-building across Africa.
+          </p>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
+
+<style>
+  .hexagon-frame {
+    transition: transform 0.5s ease;
+  }
+  .hexagon-frame:hover {
+    transform: scale(1.05) rotate(2deg);
+  }
+</style>
 
 <!-- Vision & Mission -->
 <section class="py-5">
@@ -310,6 +374,16 @@
 <footer class="py-4 text-center">
     <p>&copy; 2026 VerdaDigi Africa. Empowering Africa's Future.</p>
 </footer>
+
+<script>
+  AOS.init({
+    duration: 800,         
+    once: true,            
+    easing: 'ease-out-cubic',
+    offset: 80,           
+    anchorPlacement: 'top-bottom'
+  });
+</script>
 
 </body>
 </html>
