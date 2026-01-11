@@ -4,287 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VerdaDigi Africa - Connecting Africa's Farms, Finance & Digital Access</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            background-color: #f8f9fa;
+        :root {
+            --green: #228B22;
+            --light-green: #32CD32;
+            --orange: #FF8C00;
+            --dark: #1a1a1a;
         }
-        .navbar {
-            background-color: #228B22; 
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--dark); background: #f9fff9; }
+        .bg-hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('https://static01.nyt.com/images/2024/01/19/climate/19cli-oldcrops/19cli-oldcrops-superJumbo.jpg') center/cover no-repeat;
+            color: white; min-height: 90vh; display: flex; align-items: center;
         }
-        .navbar-brand, .nav-link {
-            color: #fff !important;
-        }
-        .section-header {
-            color: #FF8C00; 
-        }
-        .card {
-            border: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .btn-primary {
-            background-color: #228B22;
-            border-color: #228B22;
-        }
-        .btn-secondary {
-            background-color: #FF8C00;
-            border-color: #FF8C00;
-        }
-        footer {
-            background-color: #228B22;
-            color: #fff;
-        }
-        /* Add more custom styles as needed */
+        .badge-since { background: var(--light-green); color: white; font-weight: bold; }
+        .section-title { color: var(--orange); font-weight: bold; }
+        .hexagon { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); background: var(--green); color: white; padding: 2rem; text-align: center; }
+        .value-bubble { background: var(--light-green); border-radius: 50%; width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; margin: auto; font-size: 1.3rem; font-weight: bold; color: white; }
+        .key-point { background: rgba(50,205,50,0.1); border-left: 5px solid var(--green); padding: 1rem; margin-bottom: 1rem; }
+        .partner-card { background: white; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        footer { background: var(--green); color: white; }
     </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark">
+<!-- Hero Section -->
+<section class="bg-hero text-center">
     <div class="container">
-        <a class="navbar-brand" href="#">VerdaDigi Africa</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#vision">Vision & Mission</a></li>
-                <li class="nav-item"><a class="nav-link" href="#values">Our Values</a></li>
-                <li class="nav-item"><a class="nav-link" href="#problems">Problems We Solve</a></li>
-                <li class="nav-item"><a class="nav-link" href="#solutions">Our Solutions</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#investors">Investors/Share Structure</a></li>
-                <li class="nav-item"><a class="nav-link" href="#market">Market Opportunity</a></li>
-                <li class="nav-item"><a class="nav-link" href="#partners">Partners</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#marketplace">Marketplace</a></li>
-                <li class="nav-item"><a class="nav-link" href="#affiliate">Affiliate/Reseller Program</a></li>
-                <li class="nav-item"><a class="nav-link" href="#login">Login/Dashboard</a></li>
-            </ul>
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h1 class="display-3 fw-bold">VerdaDigi<span style="color: var(--orange);">Africa</span></h1>
+        <p class="lead fs-3">Connecting Africa's Farms, Finance & Digital Access</p>
+        <p class="fs-5">A future-forward platform empowering Africans through agriculture, innovation, and inclusive wealth-building.</p>
+        
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="bg-white text-dark p-4 rounded shadow">
+                    <h4 class="fw-bold">$50B+</h4>
+                    <p>Nigerian Agricultural Economy</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="bg-white text-dark p-4 rounded shadow">
+                    <h4 class="fw-bold">70M+</h4>
+                    <p>Mobile Data Users</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="bg-white text-dark p-4 rounded shadow">
+                    <h4 class="fw-bold">All-in-One</h4>
+                    <p>Unified Digital Ecosystem</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <a href="#contact" class="btn btn-lg btn-success me-3 px-5">Get Started Today →</a>
+            <a href="#about" class="btn btn-lg btn-outline-light px-5">Learn More</a>
         </div>
     </div>
-</nav>
+</section>
 
-<!-- Home/Welcome Section -->
-<section id="home" class="py-5 bg-light">
+<!-- Introduction / About Us -->
+<section id="about" class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <span class="badge badge-since px-3 py-2">Since 2025</span>
+                <h2 class="section-title display-5">Introduction</h2>
+                <h3>Welcome to VerdaDigi Africa!</h3>
+                <p class="lead">"Connecting Africa's Farms, Finance & Digital Access"</p>
+                <p>We're excited to have you on this journey toward empowering lives through innovation, agriculture, telecom, and financial inclusion.</p>
+                <p>At VerdaDigi Africa, we believe everyone — regardless of location or background — deserves access to income opportunities...</p>
+                <p class="fw-bold">David A. Iorafia<br><small>CEO/Chairman</small></p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://thumbs.dreamstime.com/b/portrait-smiling-black-african-businessman-wearing-traditional-clothing-portrait-handsome-black-african-business-man-wearing-218923415.jpg" alt="David A. Iorafia" class="img-fluid rounded-circle shadow" style="max-width: 400px;">
+            </div>
+        </div>
+        <div class="mt-5">
+            <h4 class="section-title">About Us</h4>
+            <p>A future-forward platform rooted in growth, agriculture, digital innovation, and inclusive wealth-building across Africa.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="py-5">
     <div class="container text-center">
-        <h1 class="display-4 section-header">VerdaDigi Africa</h1>
-        <h2>Connecting Africa's Farms, Finance & Digital Access</h2>
-        <p class="lead">We're excited to have you on this journey toward empowering lives through innovation, agriculture, telecom, and financial inclusion.</p>
-        <p>At VerdaDigi Africa, we believe everyone — regardless of location or background — deserves access to income opportunities. Whether you're here as a vendor, a reseller, a customer, or a community partner, you're now part of a movement designed to uplift and transform.</p>
-        <p>This is more than a platform. It's a vision. It's your gateway to earn, grow, and impact lives through the power of technology and connection.</p>
-        <a href="#login" class="btn btn-primary">Get Started</a>
-        <a href="#marketplace" class="btn btn-secondary">Explore Marketplace</a>
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Vision & Mission</h2>
+        <div class="row mt-5">
+            <div class="col-md-6 mb-4">
+                <div class="hexagon">
+                    <h4>Company Vision</h4>
+                    <p>To create a digital ecosystem that empowers Africans through agriculture, fintech, and telecom integration — enabling income, inclusion, and innovation from farm to wallet.</p>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="hexagon">
+                    <h4>Company Mission</h4>
+                    <p>To bridge the gap between rural productivity and urban demand by providing accessible tools for farmers, buyers, and digital entrepreneurs to earn, grow, and connect through a unified marketplace.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- About Us Section -->
-<section id="about" class="py-5">
+<!-- Our Values -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Our Values</h2>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-3 mb-4"><div class="value-bubble">1 Empowerment</div></div>
+            <div class="col-md-3 mb-4"><div class="value-bubble">2 Inclusion</div></div>
+            <div class="col-md-3 mb-4"><div class="value-bubble">3 Innovation</div></div>
+            <div class="col-md-3 mb-4"><div class="value-bubble">4 Integrity</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Problem -->
+<section class="py-5">
     <div class="container">
-        <h2 class="section-header">About Us</h2>
-        <p>A future-forward platform rooted in growth, agriculture, digital innovation, and inclusive wealth-building across Africa.</p>
-        <div class="row">
-            <div class="col-md-4">
-                <img src="https://placehold.co/300x300" alt="David A. Iorafia" class="img-fluid rounded-circle">
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Problem</h2>
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <div class="key-point">No inclusive, all-in-one system rewarding both rural producers & digital users</div>
+                <div class="key-point">Millions lack stable income or digital opportunities.</div>
+                <div class="key-point">Farmers struggle to access profitable markets.</div>
             </div>
+            <div class="col-lg-6">
+                <img src="https://www.shutterstock.com/image-photo/portrait-man-seasonal-farm-worker-600nw-2262970031.jpg" alt="Farmer thinking" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Solution</h2>
+        <div class="row mt-4">
+            <div class="col-lg-6 order-lg-2">
+                <img src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2025/03/29150357/solar_powered_irrigation_Rwanda_3-1200x800.jpg" alt="Modern African farming" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <div class="key-point">Agricultural Marketplace (buy/sell across Nigeria)</div>
+                <div class="key-point">Affiliate & Reseller Income Systems</div>
+                <div class="key-point">Fintech Tools (wallets, payments, micro-lending)</div>
+                <div class="key-point">Telecom Services (airtime, data, utilities etc)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="py-5">
+    <div class="container text-center">
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Our Services</h2>
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4"><div class="card h-100 shadow"><div class="card-body"><h5>1. Digital Marketplace</h5></div></div></div>
+            <div class="col-md-4 mb-4"><div class="card h-100 shadow"><div class="card-body"><h5>2. Wallet & Payment Gateway</h5></div></div></div>
+            <div class="col-md-4 mb-4"><div class="card h-100 shadow"><div class="card-body"><h5>3. Vendor Tools</h5></div></div></div>
+            <div class="col-md-4 mb-4"><div class="card h-100 shadow"><div class="card-body"><h5>4. VTU Services</h5></div></div></div>
+            <div class="col-md-4 mb-4"><div class="card h-100 shadow"><div class="card-body"><h5>5. Affiliate Programs</h5></div></div></div>
+            <div class="col-md-4 mb-4"><div class="card h-100 shadow"><div class="card-body"><h5>6. Micro Lending</h5></div></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Share Structure -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Share Structure</h2>
+        <div class="row justify-content-center mt-5">
             <div class="col-md-8">
-                <h3>David A. Iorafia</h3>
-                <p>CEO/Chairman</p>
-                <p>As a financial technology professional with over two years of experience in the payment solutions industry, I have developed a strong foundation in digital payments and fintech solutions. Entrepreneur in telecom and fintech, helping others capitalize on these fields for financial sustainability and independence.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Vision & Mission Section -->
-<section id="vision" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-header">Vision & Mission</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Company Vision</h4>
-                        <p>To create a digital ecosystem that empowers Africans through agriculture, fintech, and telecom integration — enabling income, inclusion, and innovation from farm to wallet.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Company Mission</h4>
-                        <p>To bridge the gap between rural productivity and urban demand by providing accessible tools for farmers, buyers, and digital entrepreneurs to earn, grow, and connect through a unified marketplace.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Our Values Section -->
-<section id="values" class="py-5">
-    <div class="container">
-        <h2 class="section-header">Our Values</h2>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h4>Empowerment</h4>
-                        <p>Empowering individuals and communities through accessible opportunities.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h4>Inclusion</h4>
-                        <p>Ensuring everyone, regardless of background, can participate and benefit.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h4>Innovation</h4>
-                        <p>Driving progress with cutting-edge technology and ideas.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h4>Integrity</h4>
-                        <p>Maintaining honesty and ethical standards in all operations.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Problems We Solve Section -->
-<section id="problems" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-header">Problems We Solve</h2>
-        <ul class="list-group">
-            <li class="list-group-item">No inclusive, all-in-one system rewarding both rural producers & digital users</li>
-            <li class="list-group-item">Millions lack stable income or digital opportunities.</li>
-            <li class="list-group-item">Farmers struggle to access profitable markets.</li>
-        </ul>
-    </div>
-</section>
-
-<!-- Our Solutions Section -->
-<section id="solutions" class="py-5">
-    <div class="container">
-        <h2 class="section-header">Our Solutions</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Agricultural Marketplace</h4>
-                        <p>Buy/sell across Nigeria</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Affiliate & Reseller Income Systems</h4>
-                        <p>Earn through referrals and reselling</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Fintech Tools</h4>
-                        <p>Wallets, payments, micro-lending</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Telecom Services</h4>
-                        <p>Airtime, data, utilities</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-header">Services</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Digital Marketplace</h4>
-                        <p>Platform for buying and selling agricultural products.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Wallet and Payment Gateway</h4>
-                        <p>Secure digital wallet and payment processing.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Vendor Tools</h4>
-                        <p>Tools for vendors to manage their business.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>VTU Services</h4>
-                        <p>Virtual top-up for airtime, data, utilities.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Affiliate Programs</h4>
-                        <p>Earn commissions through affiliates.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Micro Lending</h4>
-                        <p>Access to small loans for growth.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Investors/Share Structure Section -->
-<section id="investors" class="py-5">
-    <div class="container">
-        <h2 class="section-header">Investors/Share Structure</h2>
-        <p>Ownership breakdown targeted at potential investors.</p>
-        <div class="row">
-            <div class="col-md-6 mx-auto">
                 <canvas id="shareChart"></canvas>
             </div>
         </div>
@@ -293,63 +194,77 @@
 
 <script>
     const ctx = document.getElementById('shareChart').getContext('2d');
-    const shareChart = new Chart(ctx, {
+    new Chart(ctx, {
         type: 'pie',
         data: {
-            labels: ['Founders', 'Team/ESOP', 'Investors', 'Community/Affiliates'],
+            labels: ['Founders', 'Investors', 'Team/ESOP', 'Community/Affiliates'],
             datasets: [{
-                data: [50, 15, 25, 10],
-                backgroundColor: ['#228B22', '#32CD32', '#90EE90', '#98FB98'],
+                data: [50, 25, 15, 10],
+                backgroundColor: ['#228B22', '#FF8C00', '#32CD32', '#90EE90']
             }]
         },
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    position: 'top',
-                },
-                title: {
-                    display: true,
-                    text: 'Share Structure'
-                }
-            }
-        }
+        options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
     });
 </script>
 
-<!-- Market Opportunity Section -->
-<section id="market" class="py-5 bg-light">
+<!-- Market Opportunity -->
+<section class="py-5">
     <div class="container">
-        <h2 class="section-header">Market Opportunity</h2>
-        <ul class="list-group">
-            <li class="list-group-item">$50B+ Nigerian agricultural economy</li>
-            <li class="list-group-item">70M+ mobile data users</li>
-            <li class="list-group-item">Rising demand for micro transactions & side income platforms</li>
-            <li class="list-group-item">Growing youth population hungry for digital income</li>
-        </ul>
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Market Opportunity</h2>
+        <div class="row mt-5 text-center">
+            <div class="col-md-3 mb-4"><div class="card shadow"><div class="card-body"><h4>$50B+</h4><p>Nigerian Agricultural Economy</p></div></div></div>
+            <div class="col-md-3 mb-4"><div class="card shadow"><div class="card-body"><h4>70M+</h4><p>Mobile Data Users</p></div></div></div>
+            <div class="col-md-3 mb-4"><div class="card shadow"><div class="card-body"><h4>Rising Demand</h4><p>Micro Transactions & Side Income</p></div></div></div>
+            <div class="col-md-3 mb-4"><div class="card shadow"><div class="card-body"><h4>Growing Youth</h4><p>Hungry for Digital Income</p></div></div></div>
+        </div>
     </div>
 </section>
 
-<!-- Partners Section -->
-<section id="partners" class="py-5">
-    <div class="container">
-        <h2 class="section-header">Partners</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <img src="https://placehold.co/300x300" alt="Benedavid Ter-Ngonbua" class="card-img-top">
-                    <div class="card-body">
-                        <h4>Benedavid Ter-Ngonbua</h4>
-                        <p>Key partner in agricultural initiatives.</p>
-                    </div>
+<!-- Partners -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Key Partners</h2>
+        <div class="row mt-5">
+            <div class="col-md-6 mb-4">
+                <div class="partner-card p-4">
+                    <img src="https://www.shutterstock.com/image-photo/black-people-portrait-farming-confidence-600nw-2526500813.jpg" alt="Partner" class="img-fluid rounded-circle mb-3" style="width:150px;">
+                    <h5>Benededavid Ter-Ngonbua</h5>
+                    <p>Key Strategic Partner</p>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <img src="https://placehold.co/300x300" alt="Jeremiah Yanaga" class="card-img-top">
-                    <div class="card-body">
-                        <h4>Jeremiah Yanaga</h4>
-                        <p>Collaborator in fintech solutions.</p>
+            <div class="col-md-6 mb-4">
+                <div class="partner-card p-4">
+                    <img src="https://www.shutterstock.com/image-photo/smile-business-portrait-black-man-600nw-2503252739.jpg" alt="Partner" class="img-fluid rounded-circle mb-3" style="width:150px;">
+                    <h5>Jeremiah Yanaga</h5>
+                    <p>Key Strategic Partner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact / Thank You -->
+<section id="contact" class="py-5">
+    <div class="container text-center">
+        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
+        <h2 class="section-title display-5">Thank You For Your Attention</h2>
+        <p class="lead mt-4">We look forward to connecting with you!</p>
+        
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="card shadow p-4">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <img src="https://img.freepik.com/premium-photo/woman-call-center-headset-smile-with-arms-crossed-telemarketing-crm-sales-success-african-person-support-agent-happy-about-customer-service-contact-us-help-desk-startup-career_590464-186263.jpg" alt="Support" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-6 text-start">
+                            <h5>Contact Information</h5>
+                            <p><strong>Phone:</strong> +2349031458900</p>
+                            <p><strong>Location:</strong> Makurdi, Benue State</p>
+                            <p><strong>Email:</strong> globalincomesuccess@gmail.com</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -357,78 +272,8 @@
     </div>
 </section>
 
-<!-- Contact Us Section -->
-<section id="contact" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-header">Contact Us</h2>
-        <p>Phone: +2349031458900</p>
-        <p>Location: Makurdi, Benue State</p>
-        <p>Email: globalincomesuccess@gmail.com</p>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name">
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-    </div>
-</section>
-
-<!-- Additional Functional Sections -->
-
-<!-- Marketplace Section (Placeholder) -->
-<section id="marketplace" class="py-5">
-    <div class="container">
-        <h2 class="section-header">Marketplace</h2>
-        <p>Browse and buy/sell agricultural products across Nigeria.</p>
-        <!-- Add marketplace functionality here, e.g., product listings -->
-        <div class="alert alert-info">Marketplace coming soon!</div>
-    </div>
-</section>
-
-<!-- Affiliate/Reseller Program Section (Placeholder) -->
-<section id="affiliate" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="section-header">Affiliate/Reseller Program</h2>
-        <p>Register to earn through affiliates or reselling.</p>
-        <!-- Add registration form or details -->
-        <a href="#" class="btn btn-primary">Register Now</a>
-    </div>
-</section>
-
-<!-- Login/Dashboard Section (Placeholder) -->
-<section id="login" class="py-5">
-    <div class="container">
-        <h2 class="section-header">Login/Dashboard</h2>
-        <p>Access your wallet, payments, vendor tools, or micro-lending.</p>
-        <form>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username">
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password">
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-        <p>Don't have an account? <a href="#">Sign Up</a></p>
-    </div>
-</section>
-
-<!-- Footer -->
 <footer class="py-4 text-center">
-    <div class="container">
-        <p>&copy; 2026 VerdaDigi Africa. All rights reserved.</p>
-    </div>
+    <p>&copy; 2026 VerdaDigi Africa. Empowering Africa's Future.</p>
 </footer>
 
 </body>
