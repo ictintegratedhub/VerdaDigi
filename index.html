@@ -30,6 +30,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Bootstrap Icons CDN  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.cs
+
 </head>
 <body>
 
@@ -189,27 +192,105 @@
   }
 </style>
 
-<!-- Vision & Mission -->
-<section class="py-5">
-    <div class="container text-center">
-        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
-        <h2 class="section-title display-5">Vision & Mission</h2>
-        <div class="row mt-5">
-            <div class="col-md-6 mb-4">
-                <div class="hexagon">
-                    <h4>Company Vision</h4>
-                    <p>To create a digital ecosystem that empowers Africans through agriculture, fintech, and telecom integration — enabling income, inclusion, and innovation from farm to wallet.</p>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="hexagon">
-                    <h4>Company Mission</h4>
-                    <p>To bridge the gap between rural productivity and urban demand by providing accessible tools for farmers, buyers, and digital entrepreneurs to earn, grow, and connect through a unified marketplace.</p>
-                </div>
-            </div>
-        </div>
+<!-- Vision & Mission Section -->
+<section class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #f0f9f0 0%, #e8f5ff 100%);">
+  <div class="container">
+    <!-- Header -->
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="badge rounded-pill px-5 py-3 fs-4 fw-bold mb-3" 
+            style="background: linear-gradient(90deg, #228B22, #32CD32); color: white; box-shadow: 0 4px 15px rgba(34,139,34,0.3);">
+        Since 2025
+      </span>
+      <h2 class="display-5 fw-bold" style="color: #FF8C00;">
+        Vision & Mission
+      </h2>
     </div>
+
+    <!-- Cards Container -->
+    <div class="row g-5 justify-content-center">
+
+      <!-- Vision Card -->
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+        <div class="vision-card rounded-4 overflow-hidden shadow-lg h-100 position-relative" 
+             style="background: linear-gradient(145deg, #ffffff, #f0fff0); border: 2px solid #228B22; transition: all 0.4s ease;">
+          <div class="card-overlay position-absolute top-0 start-0 w-100 h-100" 
+               style="background: linear-gradient(45deg, rgba(34,139,34,0.08) 0%, rgba(50,205,50,0.05) 100%); pointer-events: none;"></div>
+          
+          <div class="p-5 position-relative">
+            <!-- Icon (lightbulb for vision) -->
+            <div class="icon-circle mb-4 d-inline-flex align-items-center justify-content-center rounded-circle" 
+                 style="width: 80px; height: 80px; background: #228B22; color: white; font-size: 2.2rem;">
+              <i class="bi bi-lightbulb-fill"></i> <!-- Bootstrap Icons - add <link> for Bootstrap Icons if not already -->
+            </div>
+
+            <h4 class="fw-bold mb-3 fs-3" style="color: #228B22;">
+              Company Vision
+            </h4>
+            <p class="fs-5 lh-lg text-muted">
+              Creating a comprehensive digital ecosystem that empowers Africans through agriculture, fintech, and telecom integration — from farm to wallet, connecting rural producers with urban markets and digital opportunities.
+            </p>
+          </div>
+
+          <!-- Subtle background pattern -->
+          <div class="position-absolute bottom-0 end-0 opacity-10" style="width: 180px; height: 180px; background: url('https://www.transparenttextures.com/patterns/circuit.png'), url('https://www.transparenttextures.com/patterns/leaves.png'); background-blend-mode: multiply;"></div>
+        </div>
+      </div>
+
+      <!-- Mission Card -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+        <div class="mission-card rounded-4 overflow-hidden shadow-lg h-100 position-relative" 
+             style="background: linear-gradient(145deg, #ffffff, #f0f8ff); border: 2px solid #FF8C00; transition: all 0.4s ease;">
+          <div class="card-overlay position-absolute top-0 start-0 w-100 h-100" 
+               style="background: linear-gradient(45deg, rgba(255,140,0,0.08) 0%, rgba(255,165,0,0.05) 100%); pointer-events: none;"></div>
+          
+          <div class="p-5 position-relative">
+            <!-- Icon (target/compass for mission) -->
+            <div class="icon-circle mb-4 d-inline-flex align-items-center justify-content-center rounded-circle" 
+                 style="width: 80px; height: 80px; background: #FF8C00; color: white; font-size: 2.2rem;">
+              <i class="bi bi-compass-fill"></i>
+            </div>
+
+            <h4 class="fw-bold mb-3 fs-3" style="color: #FF8C00;">
+              Company Mission
+            </h4>
+            <p class="fs-5 lh-lg text-muted">
+              Bridging rural-urban gaps with accessible tools for farmers, buyers, and entrepreneurs via a unified marketplace that combines agriculture, financial services, and telecommunications in one seamless platform.
+            </p>
+          </div>
+
+          <!-- Subtle background pattern -->
+          <div class="position-absolute bottom-0 start-0 opacity-10" style="width: 180px; height: 180px; background: url('https://www.transparenttextures.com/patterns/digital.png'), url('https://www.transparenttextures.com/patterns/farm-field.png'); background-blend-mode: multiply;"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Founded & Headquarters Tags (at bottom) -->
+    <div class="text-center mt-5" data-aos="zoom-in" data-aos-delay="400">
+      <span class="badge rounded-pill px-4 py-3 me-3 fs-5 fw-bold" 
+            style="background: #228B22; color: white;">
+        2025 Founded
+      </span>
+      <span class="badge rounded-pill px-4 py-3 fs-5 fw-bold" 
+            style="background: #FF8C00; color: white;">
+        Nigeria Headquarters
+      </span>
+    </div>
+  </div>
 </section>
+
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+  .vision-card:hover, .mission-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+  }
+  .icon-circle {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  }
+</style>
 
 <!-- Our Values -->
 <section class="py-5 bg-light">
