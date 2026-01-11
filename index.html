@@ -36,60 +36,64 @@
 </head>
 <body>
 
-<!-- Hero Section  -->
-<section class="hero position-relative text-center text-white" style="min-height: 100vh; background: #000;">
-    <!-- Background Image + Strong Dark Overlay/Vignette -->
-    <div class="position-absolute top-0 start-0 w-100 h-100 bg-cover" style="background-image: url('Home.jpeg´); background-position: center; background-size: cover; opacity: 0.85;"></div>
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at center, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.85) 70%, #000 100%);"></div>
+<!-- Hero Section -->
+<section class="hero-section position-relative text-center text-white overflow-hidden">
+    <!-- Dark Vignette Overlay -->
+    <div class="vignette-overlay position-absolute top-0 start-0 w-100 h-100"></div>
 
-    <div class="container position-relative d-flex flex-column justify-content-center align-items-center h-100" style="z-index: 2; padding: 4rem 1rem;">
+    <div class="container position-relative py-5" style="z-index: 2; min-height: 95vh; display: flex; flex-direction: column; justify-content: center;">
+        
         <!-- Since 2025 Badge -->
-        <div class="mb-4">
-            <span class="badge rounded-pill px-5 py-3 fs-4 fw-bold" style="background-color: rgba(34,139,34,0.9); border: 2px solid #fff; color: white;">
-                Empowering Africa's Future
+        <div class="mb-5">
+            <span class="badge bg-success text-white px-5 py-3 rounded-pill fs-4 fw-bold shadow">
+                Since 2025
             </span>
         </div>
 
-        <!-- Main Tagline -->
-        <h1 class="display-3 fw-bold mb-3 text-uppercase" style="letter-spacing: 1px; line-height: 1.05; max-width: 1100px; text-shadow: 3px 3px 12px rgba(0,0,0,0.9);">
-            Connecting Africa's Farms,<br>
-            <span style="color: #FFD700;">Finance</span> & <span style="color: #FFD700;">Digital Access</span>
+        <!-- Brand Name -->
+        <h1 class="display-2 fw-bold mb-4" style="letter-spacing: -2px;">
+            Verda<span style="color: #228B22;">da</span>Digi<span style="color: #FF8C00;">Africa</span>
         </h1>
 
+        <!-- Main Tagline – Uniform size, weight & color -->
+        <h2 class="display-4 fw-bold mb-4 lh-1" style="max-width: 1100px; margin: 0 auto; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+            Connecting Africa's Farms,<br>Finance And Digital Access
+        </h2>
+
         <!-- Description -->
-        <p class="lead fs-4 fw-light mb-5 opacity-90" style="max-width: 900px;">
+        <p class="lead fs-4 fw-light mb-5 opacity-90" style="max-width: 950px; margin: 0 auto;">
             A future-forward platform empowering Africans through agriculture, innovation, and inclusive wealth-building. 
             Your gateway to earning, growth, and transforming communities from farm to wallet.
         </p>
 
-        <!-- Stats Cards -->
-        <div class="row justify-content-center g-4 mb-5" style="max-width: 900px;">
-            <div class="col-md-4">
-                <div class="p-4 rounded-4 bg-white bg-opacity-10 backdrop-blur border border-white border-opacity-25">
-                    <h3 class="fw-bold display-5 mb-1">$50B+</h3>
-                    <p class="fs-5">Nigerian Agricultural Economy</p>
+        <!-- Key Statistics – Glassmorphism -->
+        <div class="row justify-content-center g-4 mb-5">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="stat-card bg-white bg-opacity-15 backdrop-blur p-4 rounded-4 shadow border border-white border-opacity-25">
+                    <h3 class="fw-bold mb-1 display-5">$50B+</h3>
+                    <p class="mb-0 fs-5">Nigerian Agricultural Economy</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="p-4 rounded-4 bg-white bg-opacity-10 backdrop-blur border border-white border-opacity-25">
-                    <h3 class="fw-bold display-5 mb-1">70M+</h3>
-                    <p class="fs-5">Mobile Data Users</p>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="stat-card bg-white bg-opacity-15 backdrop-blur p-4 rounded-4 shadow border border-white border-opacity-25">
+                    <h3 class="fw-bold mb-1 display-5">70M+</h3>
+                    <p class="mb-0 fs-5">Mobile Data Users</p>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="p-4 rounded-4 bg-white bg-opacity-10 backdrop-blur border border-white border-opacity-25">
-                    <h3 class="fw-bold display-5 mb-1">All-in-One</h3>
-                    <p class="fs-5">Unified Digital Ecosystem</p>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="stat-card bg-white bg-opacity-15 backdrop-blur p-4 rounded-4 shadow border border-white border-opacity-25">
+                    <h3 class="fw-bold mb-1 display-5">All-in-One</h3>
+                    <p class="mb-0 fs-5">Unified Digital Ecosystem</p>
                 </div>
             </div>
         </div>
 
-        <!-- Buttons -->
-        <div class="d-flex flex-column flex-sm-row gap-4">
-            <a href="#contact" class="btn btn-lg px-5 py-3 fw-bold rounded-pill shadow-lg" style="background-color: #FF8C00; border: none; color: white;">
+        <!-- Transparent Buttons -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-4 mt-3">
+            <a href="#contact" class="btn btn-lg px-5 py-3 fw-bold transparent-btn rounded-pill shadow">
                 Get Started Today →
             </a>
-            <a href="#about" class="btn btn-lg px-5 py-3 fw-bold rounded-pill" style="background: transparent; border: 2px solid #fff; color: white;">
+            <a href="#about" class="btn btn-lg px-5 py-3 fw-bold transparent-btn rounded-pill shadow">
                 Learn More
             </a>
         </div>
@@ -97,13 +101,56 @@
 </section>
 
 <style>
-    .backdrop-blur {
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+    .hero-section {
+        background-image: 
+            radial-gradient(circle at 50% 50%, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.8) 100%),
+            url('https://static01.nyt.com/images/2024/01/19/climate/19cli-oldcrops/19cli-oldcrops-superJumbo.jpg');
+        background-size: cover;
+        background-position: center 30%;
+        background-attachment: fixed;
     }
+
+    .vignette-overlay {
+        background: radial-gradient(ellipse at center, transparent 15%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.95) 100%);
+        pointer-events: none;
+    }
+
+    .backdrop-blur {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
+    .stat-card {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
+    }
+
+    .transparent-btn {
+        background: rgba(255,255,255,0.12);
+        border: 2px solid rgba(255,255,255,0.75);
+        color: white;
+        transition: all 0.4s ease;
+    }
+
+    .transparent-btn:hover {
+        background: rgba(255,255,255,0.28);
+        border-color: white;
+        transform: translateY(-6px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 992px) {
+        .hero-section h1 { font-size: 4.5rem; }
+        .hero-section h2 { font-size: 3.2rem; }
+    }
+
     @media (max-width: 768px) {
-        .hero h1 { font-size: 2.8rem !important; }
-        .lead { font-size: 1.3rem !important; }
+        .hero-section h1 { font-size: 3.8rem; }
+        .hero-section h2 { font-size: 2.6rem; }
     }
 </style>
 
