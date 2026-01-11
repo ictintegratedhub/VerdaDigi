@@ -456,42 +456,148 @@
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<!-- Problem -->
-<section class="py-5">
-    <div class="container">
-        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
-        <h2 class="section-title display-5">Problem</h2>
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <div class="key-point">No inclusive, all-in-one system rewarding both rural producers & digital users</div>
-                <div class="key-point">Millions lack stable income or digital opportunities.</div>
-                <div class="key-point">Farmers struggle to access profitable markets.</div>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://www.shutterstock.com/image-photo/portrait-man-seasonal-farm-worker-600nw-2262970031.jpg" alt="Farmer thinking" class="img-fluid rounded shadow">
-            </div>
-        </div>
+<!-- Problems / The Challenge Section -->
+<section class="py-5 position-relative overflow-hidden" style="background: #0a150a; color: #e0ffe0;">
+  <!-- Subtle gradient & glow overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at 20% 30%, rgba(34,139,34,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,140,0,0.06) 0%, transparent 60%); pointer-events: none;"></div>
+
+  <div class="container position-relative">
+    <!-- Header -->
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="badge rounded-pill px-5 py-3 fs-4 fw-bold mb-3" 
+            style="background: linear-gradient(90deg, #228B22, #FF8C00); color: white; box-shadow: 0 4px 15px rgba(34,139,34,0.3);">
+        THE CHALLENGE
+      </span>
+      <h2 class="display-5 fw-bold mb-3" style="color: #FF8C00; text-shadow: 0 2px 12px rgba(255,140,0,0.25);">
+        Problems We're Solving for Africa
+      </h2>
+      <p class="lead fw-light opacity-85" style="max-width: 900px; margin: 0 auto;">
+        Understanding the barriers that hold back millions of Africans from economic opportunity and digital access.
+      </p>
     </div>
+
+    <!-- Main Problem Cards -->
+    <div class="row g-4 justify-content-center mb-5">
+      <!-- Fragmented Systems -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="problem-card rounded-4 p-4 h-100 position-relative overflow-hidden text-center" 
+             style="background: rgba(20, 35, 20, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(34,139,34,0.4); transition: all 0.4s ease;">
+          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
+               style="width: 80px; height: 80px; background: rgba(255,140,0,0.25); color: #FF8C00; font-size: 2.5rem;">
+            <i class="bi bi-puzzle-fill"></i>
+          </div>
+          <h4 class="fw-bold fs-4 mb-3" style="color: #FF8C00;">Fragmented Systems</h4>
+          <p class="fs-5 opacity-90 mb-3">
+            Lack of an inclusive, all-in-one system that truly rewards rural producers and digital users. Current platforms are disconnected, complex, and exclude those who need them most.
+          </p>
+          <div class="stat-badge badge rounded-pill px-4 py-2 fw-bold" style="background: rgba(255,140,0,0.25); color: #FF8C00;">
+            82% of rural areas underserved
+          </div>
+          <!-- Glow on hover -->
+          <div class="glow position-absolute inset-0 pointer-events-none opacity-0 transition" 
+               style="background: radial-gradient(circle at 50% 40%, rgba(255,140,0,0.25) 0%, transparent 70%);"></div>
+        </div>
+      </div>
+
+      <!-- Income Insecurity -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="problem-card rounded-4 p-4 h-100 position-relative overflow-hidden text-center" 
+             style="background: rgba(20, 35, 20, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(34,139,34,0.4); transition: all 0.4s ease;">
+          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
+               style="width: 80px; height: 80px; background: rgba(34,139,34,0.25); color: #32CD32; font-size: 2.5rem;">
+            <i class="bi bi-currency-dollar"></i>
+          </div>
+          <h4 class="fw-bold fs-4 mb-3" style="color: #32CD32;">Income Insecurity</h4>
+          <p class="fs-5 opacity-90 mb-3">
+            Millions lack stable income or digital opportunities. Traditional employment can't keep pace with population growth, and financial services remain out of reach.
+          </p>
+          <div class="stat-badge badge rounded-pill px-4 py-2 fw-bold" style="background: rgba(34,139,34,0.25); color: #32CD32;">
+            60M+ seeking opportunities
+          </div>
+          <div class="glow position-absolute inset-0 pointer-events-none opacity-0 transition" 
+               style="background: radial-gradient(circle at 50% 40%, rgba(50,205,50,0.25) 0%, transparent 70%);"></div>
+        </div>
+      </div>
+
+      <!-- Market Access Barriers -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="problem-card rounded-4 p-4 h-100 position-relative overflow-hidden text-center" 
+             style="background: rgba(20, 35, 20, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,140,0,0.4); transition: all 0.4s ease;">
+          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
+               style="width: 80px; height: 80px; background: rgba(255,140,0,0.25); color: #FF8C00; font-size: 2.5rem;">
+            <i class="bi bi-shop-window"></i>
+          </div>
+          <h4 class="fw-bold fs-4 mb-3" style="color: #FF8C00;">Market Access Barriers</h4>
+          <p class="fs-5 opacity-90 mb-3">
+            Farmers struggle to access profitable markets and fair prices. Middlemen capture most value, while producers earn minimal margins and buyers pay inflated prices.
+          </p>
+          <div class="stat-badge badge rounded-pill px-4 py-2 fw-bold" style="background: rgba(255,140,0,0.25); color: #FF8C00;">
+            40% value lost to intermediaries
+          </div>
+          <div class="glow position-absolute inset-0 pointer-events-none opacity-0 transition" 
+               style="background: radial-gradient(circle at 50% 40%, rgba(255,140,0,0.25) 0%, transparent 70%);"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cost of Inaction Banner -->
+    <div class="cost-banner rounded-4 p-5 mt-5 text-center" 
+         style="background: rgba(10, 20, 10, 0.85); backdrop-filter: blur(15px); border: 2px solid #FF8C00; box-shadow: 0 10px 40px rgba(0,0,0,0.6);" 
+         data-aos="zoom-in" data-aos-delay="400">
+      <h3 class="fw-bold fs-2 mb-4" style="color: #FF8C00;">
+        The Cost of Inaction
+      </h3>
+      <p class="fs-5 opacity-90 mb-4">
+        Every day without solutions means lost opportunities, perpetuated poverty, and widening inequality.
+      </p>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-3">
+          <div class="stat-box p-4 rounded-3" style="background: rgba(255,140,0,0.15); border: 1px solid #FF8C00;">
+            <h4 class="display-6 fw-bold mb-1" style="color: #FF8C00;">$12B</h4>
+            <p class="small">Annual market inefficiency</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-box p-4 rounded-3" style="background: rgba(34,139,34,0.15); border: 1px solid #32CD32;">
+            <h4 class="display-6 fw-bold mb-1" style="color: #32CD32;">45%</h4>
+            <p class="small">Post-harvest losses</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-box p-4 rounded-3" style="background: rgba(255,140,0,0.15); border: 1px solid #FF8C00;">
+            <h4 class="display-6 fw-bold mb-1" style="color: #FF8C00;">80M</h4>
+            <p class="small">Financially excluded</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="stat-box p-4 rounded-3" style="background: rgba(34,139,34,0.15); border: 1px solid #32CD32;">
+            <h4 class="display-6 fw-bold mb-1" style="color: #32CD32;">3x</h4>
+            <p class="small">Rural-urban gap</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-5 fs-5 fw-medium">
+        Together, we can change this narrative and build an inclusive digital economy.
+      </p>
+    </div>
+  </div>
 </section>
 
-<!-- Solution -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
-        <h2 class="section-title display-5">Solution</h2>
-        <div class="row mt-4">
-            <div class="col-lg-6 order-lg-2">
-                <img src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2025/03/29150357/solar_powered_irrigation_Rwanda_3-1200x800.jpg" alt="Modern African farming" class="img-fluid rounded shadow">
-            </div>
-            <div class="col-lg-6">
-                <div class="key-point">Agricultural Marketplace (buy/sell across Nigeria)</div>
-                <div class="key-point">Affiliate & Reseller Income Systems</div>
-                <div class="key-point">Fintech Tools (wallets, payments, micro-lending)</div>
-                <div class="key-point">Telecom Services (airtime, data, utilities etc)</div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Hover Styles -->
+<style>
+  .problem-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  }
+  .problem-card:hover .glow {
+    opacity: 1;
+  }
+  .stat-box:hover {
+    transform: scale(1.05);
+  }
+</style>
 
 <!-- Services -->
 <section class="py-5">
