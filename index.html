@@ -31,40 +31,109 @@
 <body>
 
 <!-- Hero Section -->
-<section class="bg-hero text-center">
-    <div class="container">
-        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
-        <h1 class="display-3 fw-bold">VerdaDigi<span style="color: var(--orange);">Africa</span></h1>
-        <p class="lead fs-3">Connecting Africa's Farms, Finance & Digital Access</p>
-        <p class="fs-5">A future-forward platform empowering Africans through agriculture, innovation, and inclusive wealth-building.</p>
+<section class="bg-hero text-center position-relative">
+    <!-- Dark Vignette Overlay -->
+    <div class="vignette-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    
+    <div class="container position-relative" style="z-index: 2;">
+        <span class="badge bg-success text-white px-4 py-2 mb-4 fs-5 rounded-pill">
+            Since 2025
+        </span>
         
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-4 mb-4">
-                <div class="bg-white text-dark p-4 rounded shadow">
-                    <h4 class="fw-bold">$50B+</h4>
-                    <p>Nigerian Agricultural Economy</p>
+        <h1 class="display-3 fw-bold mb-3">
+            VerdaDigi<span class="text-warning">Africa</span>
+        </h1>
+        
+        <p class="lead fs-2 fw-medium mb-4">
+            Connecting Africa's Farms, Finance & Digital Access
+        </p>
+        
+        <p class="fs-5 mb-5" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+            A future-forward platform empowering Africans through agriculture, innovation, 
+            and inclusive wealth-building. Your gateway to earning, growth, and transforming communities from farm to wallet.
+        </p>
+
+        <!-- Key Stats -->
+        <div class="row justify-content-center g-4 mb-5">
+            <div class="col-md-4 col-sm-6">
+                <div class="bg-white bg-opacity-25 backdrop-blur rounded-3 p-4 text-white shadow">
+                    <h3 class="fw-bold mb-1">$50B+</h3>
+                    <p class="mb-0">Nigerian Agricultural Economy</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="bg-white text-dark p-4 rounded shadow">
-                    <h4 class="fw-bold">70M+</h4>
-                    <p>Mobile Data Users</p>
+            <div class="col-md-4 col-sm-6">
+                <div class="bg-white bg-opacity-25 backdrop-blur rounded-3 p-4 text-white shadow">
+                    <h3 class="fw-bold mb-1">70M+</h3>
+                    <p class="mb-0">Mobile Data Users</p>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="bg-white text-dark p-4 rounded shadow">
-                    <h4 class="fw-bold">All-in-One</h4>
-                    <p>Unified Digital Ecosystem</p>
+            <div class="col-md-4 col-sm-6">
+                <div class="bg-white bg-opacity-25 backdrop-blur rounded-3 p-4 text-white shadow">
+                    <h3 class="fw-bold mb-1">All-in-One</h3>
+                    <p class="mb-0">Unified Digital Ecosystem</p>
                 </div>
             </div>
         </div>
 
-        <div class="mt-5">
-            <a href="#contact" class="btn btn-lg btn-success me-3 px-5">Get Started Today →</a>
-            <a href="#about" class="btn btn-lg btn-outline-light px-5">Learn More</a>
+        <!-- Transparent Buttons -->
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-4">
+            <a href="#contact" class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold transparent-btn">
+                Get Started Today →
+            </a>
+            <a href="#about" class="btn btn-outline-light btn-lg px-5 py-3 fw-semibold transparent-btn">
+                Learn More
+            </a>
         </div>
     </div>
 </section>
+
+<style>
+    .bg-hero {
+        background-image: 
+            radial-gradient(circle at 50% 50%, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.75) 100%),
+            url('https://static01.nyt.com/images/2024/01/19/climate/19cli-oldcrops/19cli-oldcrops-superJumbo.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        color: white;
+        position: relative;
+    }
+
+    /* Optional: extra overlay class if you prefer separating the vignette */
+    .vignette-overlay {
+        background: radial-gradient(
+            circle at 50% 50%,
+            transparent 30%,
+            rgba(0,0,0,0.6) 70%,
+            rgba(0,0,0,0.85) 100%
+        );
+        pointer-events: none;
+    }
+
+    .backdrop-blur {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .transparent-btn {
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        transition: all 0.3s ease;
+    }
+
+    .transparent-btn:hover {
+        background-color: rgba(255, 255, 255, 0.18);
+        border-color: rgba(255, 255, 255, 1);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .badge {
+        background-color: #198754 !important; /* Bootstrap success green */
+    }
+</style>
 
 <!-- Introduction / About Us -->
 <section id="about" class="py-5 bg-light">
