@@ -4,666 +4,482 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VerdaDigi Africa - Connecting Africa's Farms, Finance & Digital Access</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="description" content="VerdaDigi Africa is a comprehensive platform empowering Africans through agriculture, fintech, and telecom integration.">
     <style>
-        :root {
-            --green: #228B22;
-            --light-green: #32CD32;
-            --orange: #FF8C00;
-            --dark: #1a1a1a;
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--dark); background: #f9fff9; }
-        .bg-hero { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('Home.jpeg') center/cover no-repeat;
-            color: white; min-height: 90vh; display: flex; align-items: center;
+        header {
+            background-color: #2e7d32; /* Green for agriculture */
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .badge-since { background: var(--light-green); color: white; font-weight: bold; }
-        .section-title { color: var(--orange); font-weight: bold; }
-        .hexagon { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); background: var(--green); color: white; padding: 2rem; text-align: center; }
-        .value-bubble { background: var(--light-green); border-radius: 50%; width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; margin: auto; font-size: 1.3rem; font-weight: bold; color: white; }
-        .key-point { background: rgba(50,205,50,0.1); border-left: 5px solid var(--green); padding: 1rem; margin-bottom: 1rem; }
-        .partner-card { background: white; border: none; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        footer { background: var(--green); color: white; }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        header nav ul li a:hover {
+            color: #b08d57; /* Gold accent */
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #2e7d32;
+        }
+        .welcome {
+            background-color: #e8f5e9; /* Light green */
+            text-align: center;
+        }
+        .about, .vision-mission, .values, .problems, .solutions, .services, .investors, .market, .partners, .contact {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .values-grid, .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .value-card, .service-card {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .value-card:hover, .service-card:hover {
+            transform: scale(1.05);
+        }
+        .pie-chart {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #2e7d32;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        input, textarea, button {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #2e7d32;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1b5e20;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Bootstrap Icons CDN  -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.cs
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    easing: 'ease-out'
+  });
+</script>
 </head>
 <body>
 
-<!-- Hero Section -->
-<section class="hero-section position-relative text-center text-white overflow-hidden">
-    <!-- Dark Vignette Overlay -->
-    <div class="vignette-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    <!-- Header -->
+    <header>
+        <div class="logo">VerdaDigi Africa</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#vision">Vision & Mission</a></li>
+                <li><a href="#values">Our Values</a></li>
+                <li><a href="#problems">Problems We Solve</a></li>
+                <li><a href="#solutions">Our Solutions</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#investors">Investors/Share Structure</a></li>
+                <li><a href="#market">Market Opportunity</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#affiliate">Affiliate Program</a></li>
+                <li><a href="#login">Login/Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container position-relative py-5" style="z-index: 2; min-height: 95vh; display: flex; flex-direction: column; justify-content: center;">
-        
-        <!-- Since 2025 Badge -->
-        <div class="mb-5">
-            <span class="badge bg-success text-white px-5 py-3 rounded-pill fs-4 fw-bold shadow">
-                Since 2025
-            </span>
-        </div>
+    !-- ===== Hero / Welcome Section ===== -->
+<section id="home" class="hero" 
+  style="
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.65)),
+                url('Old-Hero.jpg') center center / cover no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  ">
 
-        <!-- Brand Name -->
-        <h1 class="display-2 fw-bold mb-4" style="letter-spacing: -2px;">
-            Verda<span style="color: #228B22;">da</span>Digi<span style="color: #FF8C00;">Africa</span>
-        </h1>
+  <!-- Vignette overlay (extra darkening at edges) -->
+  <div style="
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.7) 100%);
+    pointer-events: none;
+  "></div>
 
-        <!-- Main Tagline – Uniform size, weight & color -->
-        <h2 class="display-4 fw-bold mb-4 lh-1" style="max-width: 1100px; margin: 0 auto; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
-            Connecting Africa's Farms,<br>Finance And Digital Access
-        </h2>
-
-        <!-- Description -->
-        <p class="lead fs-4 fw-light mb-5 opacity-90" style="max-width: 950px; margin: 0 auto;">
-            A future-forward platform empowering Africans through agriculture, innovation, and inclusive wealth-building. 
-            Your gateway to earning, growth, and transforming communities from farm to wallet.
-        </p>
-
-        <!-- Key Statistics – Glassmorphism -->
-        <div class="row justify-content-center g-4 mb-5">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="stat-card bg-white bg-opacity-15 backdrop-blur p-4 rounded-4 shadow border border-white border-opacity-25">
-                    <h3 class="fw-bold mb-1 display-5">$50B+</h3>
-                    <p class="mb-0 fs-5">Nigerian Agricultural Economy</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="stat-card bg-white bg-opacity-15 backdrop-blur p-4 rounded-4 shadow border border-white border-opacity-25">
-                    <h3 class="fw-bold mb-1 display-5">70M+</h3>
-                    <p class="mb-0 fs-5">Mobile Data Users</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="stat-card bg-white bg-opacity-15 backdrop-blur p-4 rounded-4 shadow border border-white border-opacity-25">
-                    <h3 class="fw-bold mb-1 display-5">All-in-One</h3>
-                    <p class="mb-0 fs-5">Unified Digital Ecosystem</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Transparent Buttons -->
-        <div class="d-flex flex-column flex-sm-row justify-content-center gap-4 mt-3">
-            <a href="#contact" class="btn btn-lg px-5 py-3 fw-bold transparent-btn rounded-pill shadow">
-                Get Started Today →
-            </a>
-            <a href="#about" class="btn btn-lg px-5 py-3 fw-bold transparent-btn rounded-pill shadow">
-                Learn More
-            </a>
-        </div>
+  <div class="container" style="position: relative; z-index: 2; max-width: 1200px; padding: 0 20px;">
+    
+    <!-- Small tag above headline -->
+    <div data-aos="fade-down" data-aos-delay="200">
+      <span style="
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(10px);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 1.5rem;
+      ">
+        Empowering Africa's Future
+      </span>
     </div>
-</section>
 
-<style>
-    .hero-section {
-        background-image: 
-            radial-gradient(circle at 50% 50%, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.8) 100%),
-            url('Home.jpeg');
-        background-size: cover;
-        background-position: center 30%;
-        background-attachment: fixed;
-    }
+    <!-- Main Headline -->
+    <h1 data-aos="fade-up" data-aos-delay="400" style="
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 0 0 1.5rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    ">
+      Connecting Africa's Farms,<br>
+      <span style="color: #ffca28; /* gold/yellow */">Finance & Digital Access</span>
+    </h1>
 
-    .vignette-overlay {
-        background: radial-gradient(ellipse at center, transparent 15%, rgba(0,0,0,0.7) 65%, rgba(0,0,0,0.95) 100%);
-        pointer-events: none;
-    }
+    <!-- Description -->
+    <p data-aos="fade-up" data-aos-delay="600" style="
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      opacity: 0.95;
+    ">
+      A future-forward platform empowering Africans through agriculture, innovation, and inclusive wealth-building. 
+      Your gateway to earning, growth, and transforming communities from farm to wallet.
+    </p>
 
-    .backdrop-blur {
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-    }
-
-    .stat-card {
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    .stat-card:hover {
-        transform: translateY(-12px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
-    }
-
-    .transparent-btn {
+    <!-- Stats Glass Cards -->
+    <div style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    ">
+      <div data-aos="fade-up" data-aos-delay="700" style="
         background: rgba(255,255,255,0.12);
-        border: 2px solid rgba(255,255,255,0.75);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 16px;
+        padding: 1.8rem 2.5rem;
+        min-width: 220px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      ">
+        <div style="font-size: 2.4rem; font-weight: 800; color: #ffca28;">$50B+</div>
+        <div style="font-size: 1.1rem; margin-top: 0.5rem;">Nigerian Agricultural Economy</div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="800" style="
+        background: rgba(255,255,255,0.12);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 16px;
+        padding: 1.8rem 2.5rem;
+        min-width: 220px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      ">
+        <div style="font-size: 2.4rem; font-weight: 800; color: #ffca28;">70M+</div>
+        <div style="font-size: 1.1rem; margin-top: 0.5rem;">Mobile Data Users</div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="900" style="
+        background: rgba(255,255,255,0.12);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 16px;
+        padding: 1.8rem 2.5rem;
+        min-width: 220px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      ">
+        <div style="font-size: 2.4rem; font-weight: 800; color: #ffca28;">All-in-One</div>
+        <div style="font-size: 1.1rem; margin-top: 0.5rem;">Unified Digital Ecosystem</div>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div data-aos="fade-up" data-aos-delay="1100">
+      <a href="#get-started" style="
+        background: #ffca28;
+        color: #1a3c34;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0 1rem 1rem;
+        display: inline-block;
+        box-shadow: 0 6px 20px rgba(255,202,40,0.4);
+        transition: all 0.3s;
+      " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        Get Started Today →
+      </a>
+
+      <a href="#learn-more" style="
+        background: transparent;
         color: white;
-        transition: all 0.4s ease;
-    }
-
-    .transparent-btn:hover {
-        background: rgba(255,255,255,0.28);
-        border-color: white;
-        transform: translateY(-6px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    }
-
-    @media (max-width: 992px) {
-        .hero-section h1 { font-size: 4.5rem; }
-        .hero-section h2 { font-size: 3.2rem; }
-    }
-
-    @media (max-width: 768px) {
-        .hero-section h1 { font-size: 3.8rem; }
-        .hero-section h2 { font-size: 2.6rem; }
-    }
-</style>
-
-<section class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #f8fdf8 0%, #e8f5e9 100%);">
-  <div class="container">
-    <div class="row align-items-center g-5">
-
-      <!-- Left Sid -->
-      <div class="col-lg-5 text-center text-lg-start" data-aos="fade-right" data-aos-delay="100">
-        <div class="position-relative d-inline-block">
-          <!-- Hexagon frame -->
-          <div class="hexagon-frame mx-auto" style="width: 320px; height: 370px; clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); background: #228B22; padding: 12px;">
-            <div class="bg-white rounded-0 overflow-hidden" style="clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                   alt="David A. Iorafia" 
-                   class="img-fluid w-100 h-100 object-fit-cover"
-                   loading="lazy">
-            </div>
-          </div>
-
-          <!-- Since 2025 badge -->
-          <div class="position-absolute top-0 end-0 translate-middle-y me-3 mt-3" data-aos="zoom-in" data-aos-delay="400">
-            <span class="badge rounded-pill px-4 py-2 fw-bold fs-5" 
-                  style="background-color: #228B22; color: white; border: 3px solid white; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-              Since 2025
-            </span>
-          </div>
-        </div>
-
-        <h3 class="mt-4 fw-bold fs-2" style="color: #228B22;" data-aos="fade-up" data-aos-delay="300">
-          David A. Iorafia
-        </h3>
-        <p class="text-muted fs-5 fw-medium" data-aos="fade-up" data-aos-delay="400">
-          CEO / Chairman
-        </p>
-      </div>
-
-      <!-- Right Side -->
-      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
-        <!-- Section Title -->
-        <h2 class="display-5 fw-bold mb-4" style="color: #FF8C00;" data-aos="fade-up" data-aos-delay="100">
-          Introduction
-        </h2>
-
-        <!-- Welcome Message -->
-        <div class="mb-5">
-          <h4 class="fw-bold mb-3" style="color: #228B22;" data-aos="fade-up" data-aos-delay="200">
-            Welcome Message
-          </h4>
-          <p class="lead fw-light mb-3" data-aos="fade-up" data-aos-delay="300">
-            Welcome to VerdaDigi Africa!<br>
-            <span class="fw-bold">"Connecting Africa's Farms, Finance & Digital Access"</span>
-          </p>
-          <p class="fs-5 mb-4" data-aos="fade-up" data-aos-delay="400">
-            We're excited to have you on this journey toward empowering lives through innovation, agriculture, telecom, and financial inclusion.
-          </p>
-          <p class="fs-5 mb-4" data-aos="fade-up" data-aos-delay="500">
-            At VerdaDigi Africa, we believe everyone — regardless of location or background — deserves access to income opportunities. Whether you're here as a vendor, a reseller, a customer, or a community partner, you're now part of a movement designed to uplift and transform.
-          </p>
-          <p class="fs-5 fw-medium" style="color: #FF8C00;" data-aos="fade-up" data-aos-delay="600">
-            This is more than a platform. It's a vision. It's your gateway to earn, grow, and impact lives through the power of technology and connection.
-          </p>
-        </div>
-
-        <!-- About Us -->
-        <div class="p-4 rounded-4 shadow-sm" style="background: rgba(34,139,34,0.08); border-left: 6px solid #FF8C00;" data-aos="zoom-in" data-aos-delay="700">
-          <h4 class="fw-bold mb-3" style="color: #228B22;">
-            About Us
-          </h4>
-          <p class="fs-5">
-            A future-forward platform rooted in growth, agriculture, digital innovation, and inclusive wealth-building across Africa.
-          </p>
-        </div>
-      </div>
-
+        border: 2px solid rgba(255,255,255,0.6);
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0 1rem;
+        display: inline-block;
+        transition: all 0.3s;
+      " onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.borderColor='white'" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.6)'">
+        Learn More
+      </a>
     </div>
+
   </div>
 </section>
 
-<style>
-  .hexagon-frame {
-    transition: transform 0.5s ease;
-  }
-  .hexagon-frame:hover {
-    transform: scale(1.05) rotate(2deg);
-  }
-</style>
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>VerdaDigi Africa is a future-forward platform rooted in growth, agriculture, digital innovation, and inclusive wealth-building.</p>
+        <h3>CEO/Chairman: David A. Iorafia</h3>
+        <p>Bio: David A. Iorafia is a visionary leader with extensive experience in agriculture and fintech, dedicated to bridging rural-urban divides in Africa.</p>
+        <!-- Placeholder for CEO photo -->
+        <img src="https://via.placeholder.com/200x200?text=David+A.+Iorafia" alt="David A. Iorafia" style="border-radius:50%;">
+    </section>
 
-<!-- Vision & Mission -->
-<section class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, #f0f9f0 0%, #e8f5ff 100%);">
-  <div class="container">
-    <!-- Header -->
-    <div class="text-center mb-5" data-aos="fade-up">
-      <span class="badge rounded-pill px-5 py-3 fs-4 fw-bold mb-3" 
-            style="background: linear-gradient(90deg, #228B22, #32CD32); color: white; box-shadow: 0 4px 15px rgba(34,139,34,0.3);">
-        Since 2025
-      </span>
-      <h2 class="display-5 fw-bold" style="color: #FF8C00;">
-        Vision & Mission
-      </h2>
-    </div>
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="vision-mission">
+        <h2>Vision & Mission</h2>
+        <h3>Vision</h3>
+        <p>Creating a digital ecosystem empowering Africans through agriculture, fintech, and telecom integration from farm to wallet.</p>
+        <h3>Mission</h3>
+        <p>Bridging rural-urban gaps with accessible tools for farmers, buyers, and entrepreneurs via a unified marketplace.</p>
+    </section>
 
-    <!-- Cards Container -->
-    <div class="row g-5 justify-content-center">
-
-      <!-- Vision Card -->
-      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-        <div class="vision-card rounded-4 overflow-hidden shadow-lg h-100 position-relative" 
-             style="background: linear-gradient(145deg, #ffffff, #f0fff0); border: 2px solid #228B22; transition: all 0.4s ease;">
-          <div class="card-overlay position-absolute top-0 start-0 w-100 h-100" 
-               style="background: linear-gradient(45deg, rgba(34,139,34,0.08) 0%, rgba(50,205,50,0.05) 100%); pointer-events: none;"></div>
-          
-          <div class="p-5 position-relative">
-            <!-- Icon (lightbulb for vision) -->
-            <div class="icon-circle mb-4 d-inline-flex align-items-center justify-content-center rounded-circle" 
-                 style="width: 80px; height: 80px; background: #228B22; color: white; font-size: 2.2rem;">
-              <i class="bi bi-lightbulb-fill"></i> <!-- Bootstrap Icons - add <link> for Bootstrap Icons if not already -->
+    <!-- Our Values Section -->
+    <section id="values" class="values">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Empowerment</h3>
+                <p>Enabling individuals and communities to achieve self-sufficiency through innovative tools.</p>
+                <!-- Icon placeholder -->
+                <img src="https://via.placeholder.com/100?text=Empowerment+Icon" alt="Empowerment Icon">
             </div>
-
-            <h4 class="fw-bold mb-3 fs-3" style="color: #228B22;">
-              Company Vision
-            </h4>
-            <p class="fs-5 lh-lg text-muted">
-              Creating a comprehensive digital ecosystem that empowers Africans through agriculture, fintech, and telecom integration — from farm to wallet, connecting rural producers with urban markets and digital opportunities.
-            </p>
-          </div>
-
-          <!-- Subtle background pattern -->
-          <div class="position-absolute bottom-0 end-0 opacity-10" style="width: 180px; height: 180px; background: url('https://www.transparenttextures.com/patterns/circuit.png'), url('https://www.transparenttextures.com/patterns/leaves.png'); background-blend-mode: multiply;"></div>
-        </div>
-      </div>
-
-      <!-- Mission Card -->
-      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-        <div class="mission-card rounded-4 overflow-hidden shadow-lg h-100 position-relative" 
-             style="background: linear-gradient(145deg, #ffffff, #f0f8ff); border: 2px solid #FF8C00; transition: all 0.4s ease;">
-          <div class="card-overlay position-absolute top-0 start-0 w-100 h-100" 
-               style="background: linear-gradient(45deg, rgba(255,140,0,0.08) 0%, rgba(255,165,0,0.05) 100%); pointer-events: none;"></div>
-          
-          <div class="p-5 position-relative">
-            <!-- Icon (target/compass for mission) -->
-            <div class="icon-circle mb-4 d-inline-flex align-items-center justify-content-center rounded-circle" 
-                 style="width: 80px; height: 80px; background: #FF8C00; color: white; font-size: 2.2rem;">
-              <i class="bi bi-compass-fill"></i>
+            <div class="value-card">
+                <h3>Inclusion</h3>
+                <p>Ensuring access for all, regardless of location or background.</p>
+                <img src="https://via.placeholder.com/100?text=Inclusion+Icon" alt="Inclusion Icon">
             </div>
-
-            <h4 class="fw-bold mb-3 fs-3" style="color: #FF8C00;">
-              Company Mission
-            </h4>
-            <p class="fs-5 lh-lg text-muted">
-              Bridging rural-urban gaps with accessible tools for farmers, buyers, and entrepreneurs via a unified marketplace that combines agriculture, financial services, and telecommunications in one seamless platform.
-            </p>
-          </div>
-
-          <!-- Subtle background pattern -->
-          <div class="position-absolute bottom-0 start-0 opacity-10" style="width: 180px; height: 180px; background: url('https://www.transparenttextures.com/patterns/digital.png'), url('https://www.transparenttextures.com/patterns/farm-field.png'); background-blend-mode: multiply;"></div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Founded & Headquarters Tags -->
-    <div class="text-center mt-5" data-aos="zoom-in" data-aos-delay="400">
-      <span class="badge rounded-pill px-4 py-3 me-3 fs-5 fw-bold" 
-            style="background: #228B22; color: white;">
-        2025 Founded
-      </span>
-      <span class="badge rounded-pill px-4 py-3 fs-5 fw-bold" 
-            style="background: #FF8C00; color: white;">
-        Nigeria Headquarters
-      </span>
-    </div>
-  </div>
-</section>
-
-<!-- Bootstrap Icons CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-<style>
-  .vision-card:hover, .mission-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
-  }
-  .icon-circle {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-  }
-</style>
-
-<!-- Our Core Values / Principles Section -->
-<section class="py-5 position-relative" style="background: #0d1a0d; color: #e0f0e0; overflow: hidden;">
-  <!-- Subtle background glow/pattern -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at 30% 20%, rgba(34,139,34,0.12) 0%, transparent 40%), radial-gradient(circle at 70% 80%, rgba(255,140,0,0.08) 0%, transparent 50%); pointer-events: none;"></div>
-
-  <div class="container position-relative">
-    <!-- Header -->
-    <div class="text-center mb-5">
-      <span class="badge rounded-pill px-4 py-2 mb-3" style="background: #228B22; color: white; font-size: 1.1rem;">
-        OUR CORE VALUES
-      </span>
-      <h2 class="display-5 fw-bold mb-3" style="color: #FF8C00; text-shadow: 0 2px 10px rgba(255,140,0,0.3);">
-        Principles That Drive Us Forward
-      </h2>
-      <p class="lead fw-light opacity-75" style="max-width: 800px; margin: 0 auto;">
-        Four pillars that guide every decision, partnership, and innovation we create for Africa's digital future.
-      </p>
-    </div>
-
-    <!-- Values Cards Grid -->
-    <div class="row g-4 justify-content-center">
-      <!-- Empowerment -->
-      <div class="col-lg-3 col-md-6">
-        <div class="value-card text-center p-5 rounded-4 position-relative overflow-hidden h-100" 
-             style="background: rgba(20, 40, 20, 0.65); backdrop-filter: blur(10px); border: 1px solid rgba(34,139,34,0.3); transition: all 0.4s ease;">
-          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
-               style="width: 90px; height: 90px; background: rgba(34,139,34,0.25); color: #32CD32; font-size: 2.8rem; border: 2px solid #32CD32;">
-            <i class="bi bi-heart-fill"></i>
-          </div>
-          <h4 class="fw-bold fs-3 mb-3" style="color: #32CD32;">Empowerment</h4>
-          <p class="fs-5 opacity-85">
-            We believe in giving every African—from rural farmers to urban entrepreneurs—the tools, knowledge, and access they need to thrive in the digital economy.
-          </p>
-          <!-- Hover glow layer -->
-          <div class="glow-layer position-absolute top-0 start-0 w-100 h-100 pointer-events-none" 
-               style="background: radial-gradient(circle at 50% 30%, rgba(50,205,50,0.25) 0%, transparent 60%); opacity: 0; transition: opacity 0.5s ease;"></div>
-        </div>
-      </div>
-
-      <!-- Inclusion -->
-      <div class="col-lg-3 col-md-6">
-        <div class="value-card text-center p-5 rounded-4 position-relative overflow-hidden h-100" 
-             style="background: rgba(20, 40, 20, 0.65); backdrop-filter: blur(10px); border: 1px solid rgba(255,140,0,0.3); transition: all 0.4s ease;">
-          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
-               style="width: 90px; height: 90px; background: rgba(255,140,0,0.25); color: #FFAA33; font-size: 2.8rem; border: 2px solid #FFAA33;">
-            <i class="bi bi-people-fill"></i>
-          </div>
-          <h4 class="fw-bold fs-3 mb-3" style="color: #FFAA33;">Inclusion</h4>
-          <p class="fs-5 opacity-85">
-            No one is left behind. We design for accessibility, ensuring millions without stable income or digital access can participate and prosper.
-          </p>
-          <!-- Hover glow -->
-          <div class="glow-layer position-absolute top-0 start-0 w-100 h-100 pointer-events-none" 
-               style="background: radial-gradient(circle at 50% 30%, rgba(255,140,0,0.25) 0%, transparent 60%); opacity: 0; transition: opacity 0.5s ease;"></div>
-        </div>
-      </div>
-
-      <!-- Innovation -->
-      <div class="col-lg-3 col-md-6">
-        <div class="value-card text-center p-5 rounded-4 position-relative overflow-hidden h-100" 
-             style="background: rgba(20, 40, 20, 0.65); backdrop-filter: blur(10px); border: 1px solid rgba(34,139,34,0.3); transition: all 0.4s ease;">
-          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
-               style="width: 90px; height: 90px; background: rgba(34,139,34,0.25); color: #32CD32; font-size: 2.8rem; border: 2px solid #32CD32;">
-            <i class="bi bi-rocket-takeoff-fill"></i>
-          </div>
-          <h4 class="fw-bold fs-3 mb-3" style="color: #32CD32;">Innovation</h4>
-          <p class="fs-5 opacity-85">
-            Combining agriculture, fintech, and telecom in groundbreaking ways. We pioneer solutions that transform traditional systems for modern digital times.
-          </p>
-          <!-- Hover glow -->
-          <div class="glow-layer position-absolute top-0 start-0 w-100 h-100 pointer-events-none" 
-               style="background: radial-gradient(circle at 50% 30%, rgba(50,205,50,0.25) 0%, transparent 60%); opacity: 0; transition: opacity 0.5s ease;"></div>
-        </div>
-      </div>
-
-      <!-- Integrity -->
-      <div class="col-lg-3 col-md-6">
-        <div class="value-card text-center p-5 rounded-4 position-relative overflow-hidden h-100 highlight-card" 
-             style="background: rgba(30, 30, 30, 0.75); backdrop-filter: blur(12px); border: 2px solid #FF8C00; box-shadow: 0 0 25px rgba(255,140,0,0.2); transition: all 0.4s ease;">
-          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
-               style="width: 90px; height: 90px; background: rgba(255,140,0,0.3); color: #FF8C00; font-size: 2.8rem; border: 2px solid #FF8C00;">
-            <i class="bi bi-shield-check-fill"></i>
-          </div>
-          <h4 class="fw-bold fs-3 mb-3" style="color: #FF8C00;">Integrity</h4>
-          <p class="fs-5 opacity-85">
-            Trust is our foundation. We operate with transparency, fairness, and accountability in every transaction, partnership, and community interaction.
-          </p>
-          
-        </div>
-      </div>
-    </div>
-
-    <!-- Call to action line (subtle) -->
-    <div class="text-center mt-5 pt-4 opacity-75 small">
-      Join thousands building a better digital future for Africa
-    </div>
-  </div>
-</section>
-
-<!-- Hover interaction -->
-<style>
-  .value-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  }
-  .value-card:hover .glow-layer {
-    opacity: 1;
-  }
-  .highlight-card {
-    border-width: 2px;
-    border-color: #FF8C00;
-  }
-</style>
-
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-<!-- The Challenge Section -->
-<section class="py-5 position-relative overflow-hidden" style="background: #e8f5e8; color: #1b5e20;">
-  <!-- Subtle gradient & glow overlay -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at 20% 30%, rgba(34,139,34,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(255,140,0,0.06) 0%, transparent 60%); pointer-events: none;"></div>
-
-  <div class="container position-relative">
-    <!-- Header -->
-    <div class="text-center mb-5" data-aos="fade-up">
-      <span class="badge rounded-pill px-5 py-3 fs-4 fw-bold mb-3" 
-            style="background: linear-gradient(90deg, #228B22, #FF8C00); color: white; box-shadow: 0 4px 15px rgba(34,139,34,0.3);">
-        THE CHALLENGE
-      </span>
-      <h2 class="display-5 fw-bold mb-3" style="color: #FF8C00; text-shadow: 0 2px 12px rgba(255,140,0,0.25);">
-        Problems We're Solving for Africa
-      </h2>
-      <p class="lead fw-light opacity-85" style="max-width: 900px; margin: 0 auto;">
-        Understanding the barriers that hold back millions of Africans from economic opportunity and digital access.
-      </p>
-    </div>
-
-    <!-- Main Problem Cards -->
-    <div class="row g-4 justify-content-center mb-5">
-      <!-- Fragmented Systems -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="problem-card rounded-4 p-4 h-100 position-relative overflow-hidden text-center" 
-             style="background: rgba(20, 35, 20, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(34,139,34,0.4); transition: all 0.4s ease;">
-          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
-               style="width: 80px; height: 80px; background: rgba(255,140,0,0.25); color: #FF8C00; font-size: 2.5rem;">
-            <i class="bi bi-puzzle-fill"></i>
-          </div>
-          <h4 class="fw-bold fs-4 mb-3" style="color: #FF8C00;">Fragmented Systems</h4>
-          <p class="fs-5 opacity-90 mb-3">
-            Lack of an inclusive, all-in-one system that truly rewards rural producers and digital users. Current platforms are disconnected, complex, and exclude those who need them most.
-          </p>
-          <div class="stat-badge badge rounded-pill px-4 py-2 fw-bold" style="background: rgba(255,140,0,0.25); color: #FF8C00;">
-            82% of rural areas underserved
-          </div>
-          <!-- Glow on hover -->
-          <div class="glow position-absolute inset-0 pointer-events-none opacity-0 transition" 
-               style="background: radial-gradient(circle at 50% 40%, rgba(255,140,0,0.25) 0%, transparent 70%);"></div>
-        </div>
-      </div>
-
-      <!-- Income Insecurity -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="problem-card rounded-4 p-4 h-100 position-relative overflow-hidden text-center" 
-             style="background: rgba(20, 35, 20, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(34,139,34,0.4); transition: all 0.4s ease;">
-          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
-               style="width: 80px; height: 80px; background: rgba(34,139,34,0.25); color: #32CD32; font-size: 2.5rem;">
-            <i class="bi bi-currency-dollar"></i>
-          </div>
-          <h4 class="fw-bold fs-4 mb-3" style="color: #32CD32;">Income Insecurity</h4>
-          <p class="fs-5 opacity-90 mb-3" style=¨color: #e8f5e8;¨ne>
-            Millions lack stable income or digital opportunities. Traditional employment can't keep pace with population growth, and financial services remain out of reach.
-          </p>
-          <div class="stat-badge badge rounded-pill px-4 py-2 fw-bold" style="background: rgba(34,139,34,0.25); color: #32CD32;">
-            60M+ seeking opportunities
-          </div>
-          <div class="glow position-absolute inset-0 pointer-events-none opacity-0 transition" 
-               style="background: radial-gradient(circle at 50% 40%, rgba(50,205,50,0.25) 0%, transparent 70%);"></div>
-        </div>
-      </div>
-
-      <!-- Market Access Barriers -->
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="problem-card rounded-4 p-4 h-100 position-relative overflow-hidden text-center" 
-             style="background: rgba(20, 35, 20, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,140,0,0.4); transition: all 0.4s ease;">
-          <div class="icon mb-4 mx-auto d-flex align-items-center justify-content-center rounded-circle" 
-               style="width: 80px; height: 80px; background: rgba(255,140,0,0.25); color: #FF8C00; font-size: 2.5rem;">
-            <i class="bi bi-shop-window"></i>
-          </div>
-          <h4 class="fw-bold fs-4 mb-3" style="color: #FF8C00;">Market Access Barriers</h4>
-          <p class="fs-5 opacity-90 mb-3" style=¨color: #e8f5e8;¨>
-            Farmers struggle to access profitable markets and fair prices. Middlemen capture most value, while producers earn minimal margins and buyers pay inflated prices.
-          </p>
-          <div class="stat-badge badge rounded-pill px-4 py-2 fw-bold" style="background: rgba(255,140,0,0.25); color: #FF8C00;">
-            40% value lost to intermediaries
-          </div>
-          <div class="glow position-absolute inset-0 pointer-events-none opacity-0 transition" 
-               style="background: radial-gradient(circle at 50% 40%, rgba(255,140,0,0.25) 0%, transparent 70%);"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Cost of Inaction Banner -->
-    <div class="cost-banner rounded-4 p-5 mt-5 text-center" 
-         style="background: rgba(10, 20, 10, 0.85); backdrop-filter: blur(15px); border: 2px solid #FF8C00; box-shadow: 0 10px 40px rgba(0,0,0,0.6);" 
-         data-aos="zoom-in" data-aos-delay="400">
-      <h3 class="fw-bold fs-2 mb-4" style="color: #FF8C00;">
-        The Cost of Inaction
-      </h3>
-      <p class="fs-5 opacity-90 mb-4">
-        Every day without solutions means lost opportunities, perpetuated poverty, and widening inequality.
-      </p>
-
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-3">
-          <div class="stat-box p-4 rounded-3" style="background: rgba(255,140,0,0.15); border: 1px solid #FF8C00;">
-            <h4 class="display-6 fw-bold mb-1" style="color: #FF8C00;">$12B</h4>
-            <p class="small">Annual market inefficiency</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="stat-box p-4 rounded-3" style="background: rgba(34,139,34,0.15); border: 1px solid #32CD32;">
-            <h4 class="display-6 fw-bold mb-1" style="color: #32CD32;">45%</h4>
-            <p class="small">Post-harvest losses</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="stat-box p-4 rounded-3" style="background: rgba(255,140,0,0.15); border: 1px solid #FF8C00;">
-            <h4 class="display-6 fw-bold mb-1" style="color: #FF8C00;">80M</h4>
-            <p class="small">Financially excluded</p>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="stat-box p-4 rounded-3" style="background: rgba(34,139,34,0.15); border: 1px solid #32CD32;">
-            <h4 class="display-6 fw-bold mb-1" style="color: #32CD32;">3x</h4>
-            <p class="small">Rural-urban gap</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="mt-5 fs-5 fw-medium">
-        Together, we can change this narrative and build an inclusive digital economy.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Hover Styles -->
-<style>
-  .problem-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-  }
-  .problem-card:hover .glow {
-    opacity: 1;
-  }
-  .stat-box:hover {
-    transform: scale(1.05);
-  }
-</style>
-
-   <!-- Our Solutions - One Platform, Infinite Possibilities Section -->
-<section class="py-5 position-relative overflow-hidden" style="background: #e8f5e8; color: #1b5e20;">
-<!-- Partners -->
-<section class="py-5 bg-light">
-    <div class="container text-center">
-        <span class="badge badge-since px-3 py-2 mb-3">Since 2025</span>
-        <h2 class="section-title display-5">Key Partners</h2>
-        <div class="row mt-5">
-            <div class="col-md-6 mb-4">
-                <div class="partner-card p-4">
-                    <img src="https://www.shutterstock.com/image-photo/black-people-portrait-farming-confidence-600nw-2526500813.jpg" alt="Partner" class="img-fluid rounded-circle mb-3" style="width:150px;">
-                    <h5>Benededavid Ter-Ngonbua</h5>
-                    <p>Key Strategic Partner</p>
-                </div>
+            <div class="value-card">
+                <h3>Innovation</h3>
+                <p>Driving progress with cutting-edge digital solutions.</p>
+                <img src="https://via.placeholder.com/100?text=Innovation+Icon" alt="Innovation Icon">
             </div>
-            <div class="col-md-6 mb-4">
-                <div class="partner-card p-4">
-                    <img src="https://www.shutterstock.com/image-photo/smile-business-portrait-black-man-600nw-2503252739.jpg" alt="Partner" class="img-fluid rounded-circle mb-3" style="width:150px;">
-                    <h5>Jeremiah Yanaga</h5>
-                    <p>Key Strategic Partner</p>
-                </div>
+            <div class="value-card">
+                <h3>Integrity</h3>
+                <p>Building trust through ethical practices and transparency.</p>
+                <img src="https://via.placeholder.com/100?text=Integrity+Icon" alt="Integrity Icon">
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Contact / Thank You Message-->
-<section id="contact" class="py-5">
-    <div class="container text-center">
-        <h2 class="section-title display-5">Thank You For Your Attention</h2>
-        <p class="lead mt-4">We look forward to connecting with you!</p>
-        
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-8">
-                <div class="card shadow p-4">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <img src="https://img.freepik.com/premium-photo/woman-call-center-headset-smile-with-arms-crossed-telemarketing-crm-sales-success-african-person-support-agent-happy-about-customer-service-contact-us-help-desk-startup-career_590464-186263.jpg" alt="Support" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-6 text-start">
-                            <h5>Contact Information</h5>
-                            <p><strong>Phone:</strong> +2349031458900</p>
-                            <p><strong>Location:</strong> Makurdi, Benue State</p>
-                            <p><strong>Email:</strong> globalincomesuccess@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Problems We Solve Section -->
+    <section id="problems" class="problems">
+        <h2>Problems We Solve</h2>
+        <ul>
+            <li>Lack of an inclusive all-in-one system rewarding rural producers and digital users.</li>
+            <li>Millions lacking stable income or digital opportunities.</li>
+            <li>Farmers struggling to access profitable markets.</li>
+        </ul>
+    </section>
+
+    <!-- Our Solutions Section -->
+    <section id="solutions" class="solutions">
+        <h2>Our Solutions</h2>
+        <p>Integrated solutions including agricultural marketplace, affiliate & reseller income systems, fintech tools (wallets, payments, micro-lending), and telecom services (airtime, data, utilities).</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Digital Marketplace</h3>
+                <p>Buy/sell agricultural products across Nigeria.</p>
+            </div>
+            <div class="service-card">
+                <h3>Wallet and Payment Gateway</h3>
+                <p>Secure fintech tools for transactions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Vendor Tools</h3>
+                <p>Management tools for sellers.</p>
+            </div>
+            <div class="service-card">
+                <h3>VTU Services</h3>
+                <p>Airtime, data, utilities.</p>
+            </div>
+            <div class="service-card">
+                <h3>Affiliate Programs</h3>
+                <p>Earn through referrals.</p>
+            </div>
+            <div class="service-card">
+                <h3>Micro Lending</h3>
+                <p>Access to small loans.</p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="py-4 text-center">
-    <p>&copy; 2026 VerdaDigi Africa. Empowering Africa's Future.</p>
-</footer>
+    <!-- Investors/Share Structure Section -->
+    <section id="investors" class="investors">
+        <h2>Investors/Share Structure</h2>
+        <p>Ownership breakdown: 50% Founders, 15% Team/ESOP, 25% Investors, 10% Community/Affiliates.</p>
+        <canvas id="pieChart" class="pie-chart"></canvas>
+        <script>
+            const ctx = document.getElementById('pieChart').getContext('2d');
+            const pieChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Founders', 'Team/ESOP', 'Investors', 'Community/Affiliates'],
+                    datasets: [{
+                        data: [50, 15, 25, 10],
+                        backgroundColor: ['#2e7d32', '#b08d57', '#1b5e20', '#4caf50']
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+        </script>
+    </section>
 
-<script>
-  AOS.init({
-    duration: 800,         
-    once: false,            
-    easing: 'ease-out-cubic',
-    offset: 80,           
-    anchorPlacement: 'top-bottom'
-  });
-</script>
+    <!-- Market Opportunity Section -->
+    <section id="market" class="market">
+        <h2>Market Opportunity</h2>
+        <p>Statistics: $50B+ Nigerian agricultural economy, 70M+ mobile data users, rising demand for micro-transactions, growing youth population seeking digital income.</p>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners">
+        <h2>Partners</h2>
+        <h3>Benedavid Ter-Ngonbua</h3>
+        <p>Profile: Key partner in telecom integrations.</p>
+        <img src="https://via.placeholder.com/200x200?text=Benedavid+Ter-Ngonbua" alt="Benedavid Ter-Ngonbua">
+        <h3>Jeremiah Yanaga</h3>
+        <p>Profile: Expert in agricultural marketplaces.</p>
+        <img src="https://via.placeholder.com/200x200?text=Jeremiah+Yanaga" alt="Jeremiah Yanaga">
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +2349031458900</p>
+        <p>Location: Makurdi, Benue State</p>
+        <p>Email: globalincomesuccess@gmail.com</p>
+        <form action="#" method="post">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Inquiry</button>
+        </form>
+    </section>
+
+    <!-- Additional Sections -->
+    <section id="marketplace">
+        <h2>Marketplace</h2>
+        <p>Functional area for buying/selling agricultural products. (Interactive features would require backend integration.)</p>
+    </section>
+
+    <section id="affiliate">
+        <h2>Affiliate/Reseller Program</h2>
+        <p>Registration and details for earning through affiliates or reselling.</p>
+        <!-- Placeholder form -->
+        <form action="#" method="post">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <button type="submit">Join Program</button>
+        </form>
+    </section>
+
+    <section id="login">
+        <h2>Login/Dashboard</h2>
+        <p>Access wallets, payments, vendor tools, or micro-lending.</p>
+        <!-- Placeholder login form -->
+        <form action="#" method="post">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 VerdaDigi Africa. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
