@@ -283,22 +283,89 @@
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">VerdaDigi Africa</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#problems">Problems</a></li>
-                    <li><a href="#solutions">Solutions</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- ===== Header ===== -->
+<header style="
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 16px 0;
+">
+
+  <div class="container" style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  ">
+
+    <!-- Logo + Brand Name -->
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <!-- Logo placeholder - replace src with your image -->
+      <img src="https://via.placeholder.com/48x48/2e7d32/ffffff?text=V" 
+           alt="VerdaDigi Logo" 
+           style="width: 48px; height: 48px; border-radius: 10px; object-fit: cover;">
+      
+      <div>
+        <div style="font-size: 1.5rem; font-weight: 800; color: #2e7d32;">
+          VerdaDigi
         </div>
-    </header>
+        <div style="font-size: 0.82rem; color: #555; letter-spacing: 0.5px; margin-top: -4px;">
+          Farm. Finance. Digital.
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Links + CTA -->
+    <div style="
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+    ">
+
+      <!-- Main Navigation -->
+      <nav>
+        <ul style="
+          display: flex;
+          gap: 28px;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          font-size: 1rem;
+          font-weight: 500;
+        ">
+          <li><a href="#about" style="color: #333; text-decoration: none; transition: color 0.2s;">About</a></li>
+          <li><a href="#solutions" style="color: #333; text-decoration: none; transition: color 0.2s;">Solutions</a></li>
+          <li><a href="#services" style="color: #333; text-decoration: none; transition: color 0.2s;">Services</a></li>
+          <li><a href="#contact" style="color: #333; text-decoration: none; transition: color 0.2s;">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Get Started Button -->
+      <a href="#get-started" class="btn btn-primary" style="
+        background: #ffb300;
+        color: #1a3c34;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 4px 14px rgba(255,179,0,0.3);
+        transition: all 0.25s;
+        white-space: nowrap;
+      " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(255,179,0,0.4)'" 
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 14px rgba(255,179,0,0.3)'">
+        Get Started
+      </a>
+
+    </div>
+
+  </div>
+</header>
 
     <!-- Hero -->
     <section id="home" class="hero">
