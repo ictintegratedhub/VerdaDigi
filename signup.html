@@ -10,6 +10,12 @@
   <!-- Font Awesome for eye icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Intl Tel Input CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" />
+
+<!-- Intl Tel Input JS (place before your closing </body> tag or in your script section) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+
   <style>
     :root {
       --green:      #2e7d32;
@@ -278,9 +284,15 @@
 
       <div class="row">
         <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="+234 803 XXX XXXX" required />
-        </div>
+  <label for="phone">Phone Number</label>
+  <input 
+    type="tel" 
+    id="phone" 
+    name="phone" 
+    placeholder="+234 803 XXX XXXX" 
+    required 
+  />
+</div>
         <div class="form-group">
           <label for="role">I am a</label>
           <select id="role" required>
@@ -473,6 +485,51 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
   document.getElementById('userEmailDisplay').textContent = email;
   document.getElementById('signup-form').style.display = 'none';
   document.getElementById('otpScreen').style.display = 'block';
+});
+</script>
+
+<script>
+// Initialize Intl Tel Input on the phone field
+const phoneInput = document.getElementById("phone");
+
+const iti = window.intlTelInput(phoneInput, {
+  // Preferred countries at the top of the dropdown
+  preferredCountries: ["ng", "gh", "ke", "za", "cm", "ci", "sn", "ug", "tz", "et"],
+  
+  // Default country (Nigeria in your case)
+  initialCountry: "ng",
+  
+  // Enable separate dial code (shows +234 next to input)
+  separateDialCode: true,
+  
+  // Show only countries in Africa (optional - remove if you want worldwide)
+  onlyCountries: [
+    "dz", "ao", "bj", "bw", "bf", "bi", "cv", "cm", "cf", "td", "km", "cg", "cd", "dj", "eg",
+    "gq", "er", "sz", "et", "ga", "gm", "gh", "gn", "gw", "ci", "ke", "ls", "lr", "ly", "mg",
+    "mw", "ml", "mr", "mu", "ma", "mz", "na", "ne", "ng", "rw", "st", "sn", "sc", "sl", "so",
+    "za", "ss", "sd", "tz", "tg", "tn", "ug", "zm", "zw"
+  ],
+  
+  // Optional: auto placeholder based on country
+  autoPlaceholder: "aggressive",
+  
+  // Format as user types
+  nationalMode: false,
+  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.js"
+});
+
+// Optional: Get full number with dial code when submitting
+document.getElementById("registerForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (iti.isValidNumber()) {
+    const fullPhone = iti.getNumber(); // e.g. +2348031234567
+    console.log("Valid phone:", fullPhone);
+    // You can send fullPhone to your backend here
+  } else {
+    alert("Please enter a valid phone number");
+    phoneInput.focus();
+  }
 });
 </script>
 
